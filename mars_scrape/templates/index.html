@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Latest from Mars</title>
+
+    <!-- Bootstrap ###########################################################################################-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Bootstrap END ###########################################################################################-->
+
+
+
+  </head>
+
+
+
+
+
+  <body style="background-color: black">
+
+    <!-- navigation START ###########################################################################################-->
+
+
+
+    <nav class="navbar navbar-darker">
+      <div class="container-fluid">
+
+        <div class="navbar-header" >
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my_nav_id_123" aria-expanded="false" >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="col-md-1"></div>
+
+          <a class="navbar-brand" href="/" style="color: #00b3b3; background-color: black; font-size: 40px">
+            <span class="nav-color">Mars</span>
+          </a>
+          		
+        </div>
+        <div class="collapse navbar-collapse" id="my_nav_id_123">
+
+          <ul class="nav navbar-nav navbar-right" style="color: #00b3b3;">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: #00b3b3;" >Last 5 Fetches<span class="caret"></span></a>
+              <ul class="dropdown-menu" style="background-color: black;">
+			  
+			  {% for v2_dict in v_time_list %}
+			  
+			  <li><a href="/archive/{{v2_dict._id}}" style="color: #00b3b3;">{{v2_dict.list_time}}</a></li>
+			  
+			  {% endfor %}
+			  
+
+				
+				
+				
+              </ul>
+            </li>
+            <li><a href="/scrape" style="color: #00b3b3;">Fetch Latest from web</a></li>
+
+
+          </ul>
+        </div> 
+      </div> 
+    </nav>
+
+
+    <!-- navigation END ###########################################################################################-->
+
+
+
+
+    <!-- page detail  ###########################################################################################-->
+
+
+
+    <div class="container-fluid" style="background-position:center; background-image: url(' {{ v_dict.image_url }}');">
+      <div class="row">
+	  <p style = "font-size: 20px; color : white;"> Data as of {{v_list_time_str}} </p>
+      </div>
+      
+      <div class="row">
+      <!-- Weather START #########-->	
+      <div class="col-md-11">
+
+        <div class="panel panel-transparent">
+          <div class="panel-body ">
+            <h2 >Weather</h2>
+            <!--<img class = "img-responsive" src="Images/latitude_temp.png" style="width:40%; float: left; margin: 5px;" alt="first image" > -->	
+            <p>
+               {{ v_dict.weather }}
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Weather END #########-->
+      </div>
+
+      <!-- Hemispheres START #########-->	
+
+      <div class="col-md-5">
+
+        <div class="panel panel-transparent">
+          <div class="panel-body">
+
+            <h2 >Hemispheres</h2>
+            <hr>
+
+            <div class="row" style = "padding-bottom: 10px">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p href="#"><img class = "img img-responsive" src={{ v_dict.hemisphere[0].image_url }} style="width:100% " alt="">{{ v_dict.hemisphere[0].name }}</p></div>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p href="#"><img class = "img img-responsive" src={{ v_dict.hemisphere[1].image_url }} style="width:100%" alt="">{{ v_dict.hemisphere[1].name }}</p></div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p href="#"><img class = "img img-responsive" src={{ v_dict.hemisphere[2].image_url }} style="width:100%" alt="">{{ v_dict.hemisphere[2].name }}</p></div>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><p href="#"><img class = "img img-responsive" src={{ v_dict.hemisphere[3].image_url }} style="width:100%" alt="">{{ v_dict.hemisphere[3].name }}</p></div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <!-- Hemispheres END #########-->	
+      
+      <!-- News START #########-->	
+
+      <div class="col-md-4" >
+
+        <div class="panel panel-transparent">
+          <div class="panel-body">
+            <h2 >News</h2>
+            <!--<img class = "img-responsive" src="Images/latitude_temp.png" style="width:40%; float: left; margin: 5px;" alt="first image" > -->	
+            <h4> {{ v_dict.news.title }}</h4>
+            <p>
+              {{ v_dict.news.list_date }}
+              <br>
+              <br>
+              {{ v_dict.news.description  }}
+            </p>
+          </div>
+        </div>
+      </div>
+        <!-- News END #########-->	
+
+
+        <!-- Fact START #########-->	
+
+      <div class="col-md-5">
+
+        <div class="panel panel-transparent">
+          <div class="panel-body">
+            <h2 >Facts</h2>
+            <!--<img class = "img-responsive" src="Images/latitude_temp.png" style="width:40%; float: left; margin: 5px;" alt="first image" > -->	
+            <table border="1">
+              <colgroup span="4"></colgroup>
+			  
+			  {% for v1_dict in v_dict.fact %}
+          
+					{% for key, value in v1_dict.items() %}
+							
+						<tr><th>{{key}}</th><td>{{value}}</td></tr>
+											  
+					{% endfor %}
+						
+			  {% endfor %}
+			  
+			  
+ 
+			  
+			  
+            </table>
+
+
+
+          </div>
+        </div>
+
+      </div>
+      <!-- Fact END #########-->	
+      
+  
+
+
+
+
+    </div>
+
+
+
+
+  <!-- page detail END ###########################################################################################-->
+
+
+
+  <footer>
+    <p style = "text-align: center"><i class="glyphicon glyphicon-copyright-mark"> Copyright 2018</i></p>
+
+  </footer>
+
+
+  </body>
+</html>
