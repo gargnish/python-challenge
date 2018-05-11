@@ -17,20 +17,6 @@
 
 // setup the data ///////////////////////////////////////////////////////////////////////
 
-//mapping 
-// d2 = state appr
-// d1 = state full name
-//x overwritten
-//y overwritten
-//xy_tooltip overwritten
-
-// mydata  =[
-  // {x0: 5, x1 : 3041 , x1 : 3041 , y0: 1 , y1: 60 , d1 : 'nn' , d2 :'ffff'  },
-  // {x0: 10, x1 : 7231 , y0: 5, y1: 76, d1 : 'nn' , d2 :'ffff' },
-  // {x0: 20, x1 : 1999 , y0: 3, y1: 56, d1 : 'nn' , d2 :'ffff' },
-  // {x0: 25, x1 : 5001 , y0: 10, y1: 96, d1 : 'nn' , d2 :'ffff' }
-// ];
-
 
 v_x0_title = 'Total Population'
 v_x1_title = 'Percentage of people 60 +'
@@ -254,11 +240,13 @@ function makeResponsive() {
     v_input_list_y = mydata.map(d => d.y);
 	v_max_x = d3.max(v_input_list_x)
 	v_max_y = d3.max(v_input_list_y)
-	v_10_x = Math.floor(v_max_x/10)
-    v_10_y = Math.floor(v_max_y/10)
+	v_min_x = d3.min(v_input_list_x)
+	v_min_y = d3.min(v_input_list_y)
+	v_10_x = Math.ceil((v_max_x -v_min_x)/10)
+    v_10_y = Math.ceil((v_max_y -v_min_y)/10)
 
-    fx_x_scaled = d3.scaleLinear().domain([0 -v_10_x, v_max_x + v_10_x]).range([x_min_target,x_max_target]);
-    fx_y_scaled = d3.scaleLinear().domain([0 -v_10_y, v_max_y + v_10_y]).range([y_min_target,y_max_target]);
+    fx_x_scaled = d3.scaleLinear().domain([v_min_x -v_10_x, v_max_x + v_10_x]).range([x_min_target,x_max_target]);
+    fx_y_scaled = d3.scaleLinear().domain([v_min_y -v_10_y, v_max_y + v_10_y]).range([y_min_target,y_max_target]);
 
     //axes/////////////////////////////////////////////////////////
 
