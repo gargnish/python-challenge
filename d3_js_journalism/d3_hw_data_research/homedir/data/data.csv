@@ -1,0 +1,53 @@
+id	state	abbr	heartattack	60+Population	Binge Drinker	smokers	skin_cancer
+1	AL	Alabama	5.9	21.4	12	21.1	8.2
+2	AK	Alaska	3.3	15.1	20.2	19.9	3.2
+3	AZ	Arizona	4.4	21.7	14.9	16.5	8.3
+4	AR	Arkansas	6.7	21.8	13.3	24.7	6.6
+5	CA	California	3.5	18.2	15.6	12.9	4.8
+6	CO	Colorado	3.1	18.7	17.5	15.7	6.3
+7	CT	Connecticut	3.7	21.6	15.9	15.4	5.8
+8	DE	Delaware	5	22.4	15.7	19.9	6.7
+9	DC	District of Columbia	2.6	16.3	24.9	16.4	2.9
+10	FL	Florida	5.3	25.3	15	17.7	8.9
+11	GA	Georgia	4.5	17.9	14.2	17.4	6.4
+12	HI	Hawaii	3.1	22.2	19.7	14.1	4.5
+13	ID	Idaho	3.7	20.4	14.8	15.9	7.1
+14	IL	Illinois	3.7	19.7	20.2	16.5	4.2
+15	IN	Indiana	5	20.3	14.8	22.9	5.6
+16	IA	Iowa	4.4	22	21.4	18.5	5.9
+17	KS	Kansas	4.2	20.2	15.8	18.1	6.2
+18	KY	Kentucky	6.8	20.9	12.7	26.2	7.7
+19	LA	Louisiana	5.2	19.5	16	24	5
+20	ME	Maine	5.5	25.7	17	19.3	6.9
+21	MD	Maryland	3.2	19.6	15.4	14.6	4.9
+22	MA	Massachusetts	4.1	21.2	17.4	14.7	6.3
+23	MI	Michigan	5.2	22	18.9	21.2	5.8
+24	MN	Minnesota	3.8	20.2	19.5	16.3	5.1
+25	MS	Mississippi	4.9	20.1	12.8	23	5.7
+26	MO	Missouri	5.4	21.5	15.1	20.6	6
+27	MT	Montana	4.2	23.5	18.9	19.9	6.8
+28	NE	Nebraska	3.8	20.1	20.3	17.3	5.7
+29	NV	Nevada	4.8	19.9	16	17	6.3
+30	NH	New Hampshire	3.8	22.8	16.8	17.5	6.3
+31	NJ	New Jersey	4.2	20.6	15.8	15.1	4.8
+32	NM	New Mexico	4.2	21.6	13.7	19.2	5.2
+33	NY	New York	3.8	20.6	15	14.4	4.1
+34	NC	North Carolina	5.1	20.5	13.6	19.1	6.6
+35	ND	North Dakota	4.6	20	24	19.9	4.4
+36	OH	Ohio	5.4	21.8	18.1	21	6
+37	OK	Oklahoma	5.5	20.1	12.9	21.1	5.9
+38	OR	Oregon	4.6	22.9	16.6	17	7.4
+39	PA	Pennsylvania	4.8	23.2	16.7	19.9	6.1
+40	RI	Rhode Island	4.3	22.1	18.4	16.3	6.3
+41	SC	South Carolina	4.6	22.2	14.1	21.5	7.2
+42	SD	South Dakota	5.1	21.2	17.4	18.6	6.1
+43	TN	Tennessee	5.7	21.2	10.6	24.2	6.8
+44	TX	Texas	3.7	16.5	16.3	14.5	4.6
+45	UT	Utah	2.9	14.6	11.4	9.7	6.6
+46	VT	Vermont	3.8	24.1	17.9	16.4	6.4
+47	VA	Virginia	4.2	19.7	15.2	19.5	5.5
+48	WA	Washington	3.8	20.1	17.1	15.3	5.8
+49	WV	West Virginia	7.4	24.9	9.6	26.7	7.6
+50	WI	Wisconsin	3.7	21.6	22.1	17.4	5.5
+51	WY	Wyoming	4.6	20.7	17.2	19.5	7.5
+52	PR	Puerto Rico	5.3	23.5	13.2	11.3	1.3
